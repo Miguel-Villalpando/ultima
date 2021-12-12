@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+	<title>Base y estudio de telematica</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta http-equiv="Content-Type"content="text/html; charset=utf-8"/>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <meta name="viewport" contente="width=device-width, user-scalable=no, initial-scale=1"/>
+	  <link rel='stylesheet'href='hoja_ccs.css'>
+	  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	  
+	  <style>
+		  #temario{
+			  display: flex;
+			  flex-wrap: wrap;
+			  background-color: darkgrey;
+			  align-items: flex-start;
+			  justify-content: space-evenly;
+		  }
+		  #temario>div{
+			  background-color: beige;
+			  font-size: 19;
+			  padding: 10px;
+			  margin:  20px;
+			  width: 122px;
+			  font-family: Verdana, Geneva, Tahoma, sans-serif;
+			  text-align: center;
+			  
+		  }
+
+	  </style>	
+	  <style type="text/css">
+			
+		* {
+			margin:0px;
+			padding:0px;
+		}
+		
+		#header {
+			margin:auto;
+			width:500px;
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		
+		ul, ol {
+			list-style:none;
+		}
+		
+		.nav > li {
+			float:left;
+		}
+		
+		.nav li a {
+			background-color:#000;
+			color:#fff;
+			text-decoration:none;
+			padding:10px 12px;
+			display:block;
+		}
+		
+		.nav li a:hover {
+			background-color:#434343;
+		}
+		
+		.nav li ul {
+			display:none;
+			position:absolute;
+			min-width:140px;
+		}
+		
+		.nav li:hover > ul {
+			display:block;
+		}
+		
+		.nav li ul li {
+			position:relative;
+		}
+		
+		.nav li ul li ul {
+			right:-140px;
+			top:0px;
+		}
+		
+	</style>
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<script>
+		var current = 0;
+		var imagenes = new Array();
+		 
+		$(document).ready(function() {
+			var numImages = 6;
+			if (numImages <= 3) {
+				$('.right-arrow').css('display', 'none');
+				$('.left-arrow').css('display', 'none');
+			}
+		 
+			$('.left-arrow').on('click',function() {
+				if (current > 0) {
+					current = current - 1;
+				} else {
+					current = numImages - 3;
+				}
+		 
+				$(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+		 
+				return false;
+			});
+		 
+			$('.left-arrow').on('hover', function() {
+				$(this).css('opacity','0.5');
+			}, function() {
+				$(this).css('opacity','1');
+			});
+		 
+			$('.right-arrow').on('hover', function() {
+				$(this).css('opacity','0.5');
+			}, function() {
+				$(this).css('opacity','1');
+			});
+		 
+			$('.right-arrow').on('click', function() {
+				if (numImages > current + 3) {
+					current = current+1;
+				} else {
+					current = 0;
+				}
+		 
+				$(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+		 
+				return false;
+			}); 
+		 });
+		</script>
+
+	</head>
+
+	<body>
+		
+		<header>
+			
+	  <div align ="Center">
+		<h1>--------------------------------------------</h1></div>  
+		<h1> Bienvenido a base y estudio de telematica. </h1>
+		<h1>--------------------------------------------</h1></div>
+		<div id="header">
+			<ul class="nav">
+				<li><a href="">Inicio</a></li>
+				<li><a href="">Especializaciones</a>
+					<ul>
+						<li><a href="">Redes Neuronales </a></li>
+						<li><a href="">Criptografia</a></li>
+						<li><a href="">Microondas</a></li>
+						<li><a href="">Logica Difusa</a>
+							<ul>
+								<li><a href="">Redes</a></li>
+								<li><a href="">Neuronas</a></li>
+								<li><a href="">Sistemas</a></li>
+								<li><a href="">Mantenimiento</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="">Escuelas</a>
+					<ul>
+						<li><a href="">Upiita</a></li>
+						<li><a href="">Etel</a></li>
+						<li><a href="">Uniins</a></li>
+						<li><a href="">Ibero</a></li>
+					</ul>
+				</li>
+				<li><a href="">Contacto</a></li>
+			</ul>
+		</div>
+
+
+		
+	   <div align ="left">
+	   <h1>¿Que es la telematica?</h1>
+	   <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   ¿Que ramas abarca? </h2>
+	   <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   ¿Es una carrera dificil? </h3>
+	   <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   ¿Para que sirve la telematica? </h4>
+       <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   ¿Que ventajas aporta al mundo? </h5>
+	   <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   ¿Que conocimiento requiero previamente? </h6>
+	   </div>
+	   <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		   <img src="C:\Users\mikdo\Desktop\Pagina c\telem.jpg" alt="descarga" width = "900px" border="5"> </h1>
+	 <p> </p>
+	 <p> </p>
+	 
+	
+
+	 <div class="container text-justify">
+		 <section class="main row">
+			 <article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+				 <h4>--- Te damos las bienvenida a nuestra pagina donde te explicaremos todo  lo  que debes saber sobre la carrera de telematica.---</h4>
+				 <p>--- 1- La palabra telemática se refiere a la combinación de la informática y de la tecnología de la comunicación para el envío y recepción de datos.</p>
+				 <p>--- 2- En sentido amplio, resulta de la unión de las telecomunicaciones y la informática, pudiendo implicar desde la tecnología de envío, recepción y almacenamiento de información a través de dispositivos de telecomunicación hasta su aplicación en vehículos, la llamada telemática de vehículos. </p>
+				 <p>--- 3- Y es que, a pesar de que la telemática se sigue usando en múltiples ámbitos, es un término que en la actualidad se usa con frecuencia para hacer referencia a las soluciones telemáticas aplicadas en vehículos.  </p>
+				 <p>¿En qué consiste la telemática? Funcionamiento </p>
+				 <p>--- Los sistemas telemáticos cuentan con un dispositivo de seguimiento que envía, recibe y almacena datos. 
+
+				</p>
+				 <p>--- El dispositivo recoge, junto a los datos GPS, otra información específica y la transmite a un servidor centralizado a través de redes móviles o satélite para que la interprete y la muestre al usuario final en tiempo real en sitios web seguros o aplicaciones optimizadas para teléfonos móviles y tablets.  
+				</p>
+				<p>¿En qué consiste la telemática? Funcionamiento </p>
+				<p>Diseño de nuevas aplicaciones para sistemas, servicios correspondientes a las áreas de redes y medidas de seguridad que deriven en un desarrollo Rápido, Fiable y Seguro de las Telecomunicaciones entabladas </p>
+			 </article>
+		 
+		 <aside class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			 <p>
+				 <h4>¿De donde proviene la telematica?</h4>
+				 <p>
+					Telemática es un campo de la ciencia que engloba los conocimientos de la informática y de la tecnología de la comunicación para el desarrollo de diseños, procesos y técnicas de servicios o aplicaciones que permiten transmitir datos.
+				 </p>
+				 <p>
+					Terminología : La palabra <code> &lt; &lt;telemática&gt; &gt;</code> se refiere a la combinación de la informática y de la tecnología de la comunicación para el envío y recepción de datos.​También es usado en ocasiones el término «teleinformática», término que nació en la disciplina de telecomunicación para designar el control remoto de sistemas informáticos, aunque no describe la telemática como tal.
+				 </p>
+				
+			 </p>
+		 </aside>
+		</section>
+	 </div>
+	 <div class="container text-justify"> 
+	   <h2>&nbsp;&nbsp;&nbsp;Caracteristicas: </h2>
+	   <p> </p>
+	   <h1></h1>
+	   <h3>
+
+	   <ul>
+	   <li type= circle>Los inicios de la telemática:  
+		La telemática se fue desarrollando a la vez que Internet. Al mismo tiempo, se desarrolló la técnica superior de ingeniería telemática. Conforme se reducía el tamaño de los ordenadores y aumentaba su uso, también crecía la necesidad de encontrar un modo más sencillo de intercambiar datos. Es a partir de entonces cuando se empezó a utilizar la tecnología de los sistemas de telecomunicación para conectar dispositivos entre ellos. La telemática había nacido. (Dato clave: Simon Nora y Alain Minc acuñaron en 1978 el término telemática en su informe titulado L’Informatisation de la société. Este informe se preparó para el entonces Primer Ministro francés, Valéry Giscard d’Estaing, como respuesta al desarrollo de la informática y el nacimiento de la era de la información. </li>
+		<p> </p>
+	   <li type= circle>Cómo funciona la telemática:
+		Los sistemas telemáticos incluidos en los vehículos cuentan con un dispositivo de seguimiento que envía, recibe y almacena datos de telemetría. Se conecta con una tarjeta SIM mediante un sistema de diagnóstico de a bordo en vehículo (ODBII) o un puerto CAN bus. La comunicación a través de la red inalámbrica se realiza gracias a un módem de a bordo. </li>
+		<p> </p>
+	   <li type= circle>¿De qué se encarga la telemática?
+		Con un mundo cada vez más conectado, el uso de la telemática en la actualidad no tiene prácticamente límites. Continuamente aumenta el número de dispositivos interconectados en el Internet de las cosas (IoT) y se desarrollan formas nuevas de usar la información basada en la ubicación de los servicios de comunicaciones.
+		Sin embargo, en muchos casos todavía persiste la idea equivocada de que la telemática aplicada a los vehículos solo muestra su localización GPS, una idea que ni siquiera se aproxima al potencial real de los sistemas que usan esta tecnología de la información. </li>
+	   </ul>
+
+	   </h3></div>
+
+	   <div class="container text-justify"> 
+	   <h2>&nbsp;&nbsp;&nbsp;Aplicaciones</h2>
+	   <h1></h1>
+	   <p> </p>
+
+	   <h3><ol>
+		     <li value="1"> El dispositivo de seguimiento del vehículo registra la localización y realiza un diagnóstico de la información. </li>
+			 <li style="color: rgb(14, 13, 13); font-style: italic;"> La información se transmite mediante redes móviles o satélite.   </li>
+			 <li> Los servidores de Verizon Connect interpretan los datos. </li>
+			 <li style="color: rgb(14, 13, 13); font-style: italic;"> La información de seguimiento del vehículo se actualiza prácticamente en tiempo real en un dispositivo local o en aplicaciones móviles. </li>
+	   </ol></h3>
+	</div>
+	   <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   <img src="C:\Users\mikdo\Desktop\Pagina c\n01.jpg" alt="n01" width = "900px" border="5"> </h1>
+		
+		<h3>
+			<CENTER>
+		<table border ="2 outset" cellpadding ="5" BGCOLOR = "grey" aling = "Center">
+			
+		<caption>  </caption>
+		<tr align="center">
+		    <td></td>	
+			<td BGCOLOR = "white"><strong>Basica</strong></td>
+			<td BGCOLOR = "white"><strong>Medio</strong></td>
+			<td BGCOLOR = "white"><strong>Avanzado</strong></td>
+		</tr>
+
+		<tr align="center">
+			<td>Programacion</td>
+			<td></td>
+			<td></td>
+			<td>&nbsp;&nbsp;♣</td>
+		</tr>
+
+		<tr align="center">
+			<td>Interpretacion de señales</td>
+			<td></td>
+			<td>&nbsp;&nbsp;♣</td>
+			<td></td>
+		</tr>
+
+		<tr align="center">
+			<td>Electronica basica</td>
+			<td></td>
+			<td>&nbsp;&nbsp;♣</td>
+			<td></td>
+		</tr>
+		</tbody>
+	   </table></h3></CENTER>
+	   
+
+	   <div class="container text-justify"> 
+		<h2>&nbsp;&nbsp;&nbsp;LA IMPORTANCIA DE LA TELEMATICA EN LA EDUCACIÓN </h2></div>
+		<div class="container"><h5>
+		La Telemática será uno de los más importantes desarrollos en el campo de la educación, ya que el éxito del futuro de un pueblo o comunidad educativa radica en las 
+		posibilidades de vivir el mundo con su entorno aunque se tenga cierta falencia en el tema."La información es la materia prima que necesitamos para crear 
+		conocimientos con los que se afrontan las problemáticas que se nos van presentando cada día en el trabajo".Esto lo que nos quiere decir; es que la informática, es 
+		una herramienta que debemos saber utilizar para poder explorarla de la mejor forma posible.Hay que tener en claro cómo, cuándo, y dónde aplicar esta gran gama 
+		de herramientas, y poder decir que tenemos algo asegurado; ya que la telemática es perfecta como ayudante educativo siempre y cuando sea muy bien utilizada. Sin 
+		duda, la Telemática será uno de los más importantes desarrollos causando muchos cambios en la actualidad; tanto buenos como malos, los cambios malos se los 
+		debemos a la falta de experiencia que se tuvo o se tiene con respecto a ciertos ámbitos de esta área; sin embargo la telemática nos ha llevado a un avance tecnológico 
+		realmente asombroso. Un avance que si es bien utilizado y bien diseñado nos puede llevar al verdadero triunfo educativo.La telemática es importante desde el uso 
+		que se promueve a través del ordenador, a partir de este momento se integran programas informáticos y actividades educativas con el fin de adquirir nuevas y 
+		distintas adaptaciones de flexibilidad, de comunicación y fijar un horizonte de máximo avance tecnológico. Tiene la ventaja de facilitar el trabajo en equipo, permite 
+		un aprendizaje a través de grupos colaborativos, flexibilidad de tiempo y localidad, oportunidades de participación, aprendizaje activo, disponibilidad de otros 
+		recursos como video, chat, etc. Además de sus ventajas ella también cuenta con algunas desventajas que requieren efectos motivadores para la participación; así 
+		pues tienen sobrecarga de información, ofertas limitadas, demora en la retroalimentación, habilidades de lectura y técnicas para nuestro futuro. </h5> </div>
+
+		<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<img src="C:\Users\mikdo\Desktop\Pagina c\lux.gif" alt="n01" width = "900px" border="5"> </h1>
+			<h1></h1>
+
+		<div class="container text-justify"> 
+		<h2>&nbsp;&nbsp;&nbsp;Origen del término </h2>	
+
+	
+			El término telemática se acuñó en Francia (télématique). En 1976, en un informe encargado por el presidente francés y elaborado por Simon Nora y Alain Minc (conocido como informe Nora-Minc y distribuido por el título: Informatización de la Sociedad), en el que se daba una visión increíblemente precisa de la evolución tecnológica futura.
+			Pero al igual que en Francia, en los países anglosajones también existe la disciplina telemática, la cual es denominada como Computer and Communications (del inglés: ‘Ordenador y Comunicaciones’) o Compunication (concepto acuñado por Wen Gao3​ en su artículo Compunication: From Concept to Practice4​). No obstante hay matices claves a distinguir 
+			entre los dos términos. Para aclarar esto, conviene situarse en el contexto de la época: por una parte Francia, que ponía claro énfasis en las telecomunicaciones como motor de su transformación social en los años 70, mientras que Estados Unidos estaba viviendo una gran revolución de la informática. Así, Compunication (computadores + comunicación) 
+			apunta a un modelo con mayor relevancia de los sistemas informáticos; telemática (télématique) por su parte, refiere a un mayor énfasis en la telecomunicación en sí. En la actualidad, esta diferencia de origen se ha perdido, ya que esta disciplina científica y tecnológica ha convergido por completo a nivel mundial, para formar un único cuerpo de 
+			conocimiento bien establecido. Naciendo de esta forma el actual significado de la telemática.
+
+		</div>
+
+		<h1></h1>
+		<h1></h1>
+		<div class="container"> 
+		<div1>
+			
+			Otra modalidad es encontrarla focalizada en una actividad específica como telemática 
+			
+		</div1>
+		</div>
+		<h1></h1>
+		<h1></h1>
+		<div class="container"> 
+		<h2>&nbsp;&nbsp;&nbsp;Perfil del Técnico o Ingeniero Telemático </h2>
+
+		<ol>
+			<li>
+				<ul>
+					<li> Planificación, despliegue, mantenimiento y gestión, operación, integración de tecnologías, etc, para entornos LAN, MAN y WAN, que puedan hacer uso tanto de tecnologías de cable como inalámbricas, así como Internet/Intranets, etc. para la prestación tanto de servicios de voz como de datos para diversas aplicaciones, desde servicios comunes de Internet hasta otros más sofisticados como podrían ser las actividades relacionadas con el despliegue y la operación con las redes de telecomunicaciones en urbanizaciones y polígonos industriales y de viviendas o las redes de telefonía móvil privadas (Servicio Móvil Terrestre) para flotas de vehículos, etc..</li>
+					<li style="color: rgb(14, 13, 13); font-style: italic;"> Supervisión, administración, participación o asistencia técnica en desarrolladores y suministradores de equipos y sistemas de telecomunicación. </li>
+				</ul>
+
+			</li>
+
+			<li id="gif"> Elaboración de Proyectos de Infraestructuras comunes de telecomunicación en edificios (ICT9​).</li>
+			<li style="color: rgb(14, 13, 13); font-style: italic;">Auditorías y diseño de redes.</li>
+			<li class="c1">Análisis, diseño e implementación de sistemas y herramientas de seguridad tanto para el almacenamiento como la transmisión de la información, así como en los accesos a redes y sistemas.</li>
+			
+		</ol>
+		</div>
+		<h1><a href="https://www.upiita.ipn.mx">Link: Escuela con carrera en telematica</a></h1>
+		<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		
+			<img src="C:\Users\mikdo\Desktop\Pagina c\upiita.jpg" alt="upiita" width = "700px" border="5"> </h1>
+		
+
+		<h1></h1>
+		<h1>----------------------------------------------------------------------------------------</h1>	
+		<h1>Mapa de trayectoria telematica</h1>	
+		<h1>----------------------------------------------------------------------------------------</h1>
+
+		<div class="container"> 
+
+		<h2>Primer Semestre</h2>
+		<div id='temario'>
+
+			<div>Algebra Lineal</div>
+			<div>Calculo Diferencial e Integral</div>
+			<div style="color:blueviolet">Administracion de sistemas operativos</div>
+			<div>Analisis y Diseño de Sistemas</div>
+			<div>Comunicacion Oral y Escrita</div>
+			<div>Programacion Estructurada</div>
+
+		</div>
+
+		<h2>Segundo Semestre</h2>
+		<div id='temario'>
+
+			<div>Ecuaciones Diferenciales</div>
+			<div>Calculo Multivariable</div>
+			<div>Programacion</div>
+			<div>Administracion Organizacional</div>
+			<div>Ingles I</div>
+			<div>Fundamentos de Fisica</div>
+			<div>Etica Profecional y Sociedad</div>
+			<div>Sociedad Ciencia y Tecnologia</div>
+			<div>Desarrollo Sustentable</div>
+
+		</div>
+
+		<h2>Tercer Semestre</h2>
+		<div id='temario'>
+
+			<div>Variable Compleja</div>
+			<div>Probabilidad</div>
+			<div>Ingles II</div>
+			<div>Estructura de Datos</div>
+			<div>Señales y Sistemas</div>
+			<div>Teoria de los Circuitos</div>
+			<div>Información  Finaciera</div>
+			<div>Metodos Numericos</div>
+			<div>Economia para ingenieros</div>
+			
+			</div>
+		
+			<h2>Cuarto Semestre</h2>
+			<div id='temario'>
+	
+				<div>Diseño Digital</div>
+				<div>Electromagnetis mo</div>
+				<div>Ingles III</div>
+				<div>Base de Datos</div>
+				<div>Señales y Sistemas</div>
+				<div>Programacion de Avanzada</div>
+				<div>Electronica I</div>
+				<div>Teoria de las Comunicacio nes</div>
+				<div>Electronica para comunicacion</div>
+				<div>Optica</div>
+				
+				</div>
+			
+		
+			<h2>Quinto Semestre</h2>
+				<div id='temario'>
+		
+					<div>Arquitectura de Computadoras</div>
+					<div>Procesamiento Digital de Señales </div>
+					<div>Ingenieria Web</div>
+					<div>Propagacion de Ondas</div>
+					<div>Comunicaciones Digitales</div>
+					<div>Transmicion de Datos</div>
+				
+					
+					</div>
+			<h2>Sexto Semestre</h2>
+				<div id='temario'>
+			
+					<div>Telefonia</div>
+					<div>Protocolos de Internet </div>
+					<div>Teoria de la Informacion</div>
+					<div>Lineal de Trasmicion y Antenas</div>
+					<div>Administracion de Proyecto</div>
+					<div>Dispositivos Programables</div>
+					
+						
+				</div>	
+			
+			<h2>Septimo Semestre</h2>
+				<div id='temario'>
+		
+					<div>Sistemas de Celulares</div>
+					<div>Sistemas Distribuidos </div>
+					<div>Liderazgo y Emprendedores</div>
+					<div>Base de datos Distribuidas</div>
+					<div>Redes inteligentes</div>
+					<div>Multimedia</div>
+					<div>Redes de telecomunica cion</div>
+				
+					
+				</div>	
+			
+			<h2>Octavo Semestre</h2>
+				<div id='temario'>
+		
+					<div>Optativa I</div>
+					<div>Seguridad en Redes</div>
+					<div>Metodologia de la investigacion</div>
+					<div>Aplicaciones Distribuidas</div>
+					<div>Servicio Social</div>
+				
+					
+			</div>		
+
+			<h2>Noveno Semestre</h2>
+				<div id='temario'>
+		
+					<div>Optativa II</div>
+					<div>Proyecto Terminal I</div>
+				
+					
+			</div>		
+
+			<h2>Decimo Semestre</h2>
+				<div id='temario'>
+		
+					<div>Proyecto Terminal II </div>
+				
+				</div>		
+
+		<h1>OPTATIVAS I</h1>	
+		<h2></h2>
+				<div id='temario'>
+		
+					<div>Programacion de dispositivos M. </div>
+					<div>Redes Inalambricas </div>
+					<div>Redes Neuronales </div>
+					<div>Logica Difusa </div>
+					<div>Sis. de Información Geografica </div>
+					<div>Normatividad en Telecom </div>
+				</div>			
+		
+
+		<h1>OPTATIVAS II</h1>	
+		<h2></h2>
+		<div id='temario'>
+				
+					<div>Television Digital </div>
+					<div>Sistema de Calidad </div>
+					<div>Filtrado Avanzado </div>
+					<div>Criptografia</div>
+					<div>Microondas </div>
+					<div>Procesamientos de Imagenes </div>
+					<div>Procesamiento de Voz </div>
+					
+		</div>									
+	
+		<h1>Presentacion de Proyectos</h1>	
+		<h2></h2>
+		<div id='temario'>
+			 		<div>Presentacion de tesis </div>
+					<div>Primera presentacion de Prototipo</div>
+					<div>Revision Final de Tesis </div>
+					<div>Segunda presentacion de Prototipo</div>
+		</div>	
+		<a href="#" class="btn-flotante">Opciones Academicas</a>
+		</div>
+		<center> 
+		<a href="https://www.upiita.ipn.mx"	button type="button" class="btn btn-dark">Upiita</button></a>
+		<a href="https://www.saes.upiita.ipn.mx/"	button type="button" class="btn btn-dark">Saes</button></a>
+		<a href="https://www.facebook.com/oficialdaeipn/"	button type="button" class="btn btn-dark">Dae</button></a>
+		<p></p>
+		</center>
+
+		<h2></h2>
+		<h2></h2>
+
+		<script src=”https://code.jquery.com/jquery-3.4.1.slim.min.js” integrity=”sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n” crossorigin=”anonymous”>
+		</script> 
+		<script src=”https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js” integrity=”sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo” crossorigin=”anonymous”></script>
+		<script src=”https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js” integrity=”sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6″ crossorigin=”anonymous”></script>
+		
+		<div class="container">
+		<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+			<img src="C:\Users\mikdo\Desktop\Pagina c\tray.jpg" alt="upiita" width = "800px" border="5"> </h1>
+		
+		</div>
+		<div class="container text-justify"> 
+			<CENTER>
+			<h1>--------------------------------------</h1>
+			<h1>Objetivo y Mision </h1>
+			<h1>--------------------------------------</h1>
+			</CENTER>
+		   </div>
+		
+			<div class="container text-justify"> 
+			<h3>Objetivo</h3>
+				<h5>Formar profesionales que aporten con el diseño, administración, implementación, mantenimiento y operación de sistemas y servicios basados en redes de comunicación proporcionando a la sociedad soluciones tecnológicas integrales, con énfasis en la responsabilidad social y el desarrollo sustentable.</h5>
+
+			<h3>Misión</h3>
+				<h5>Formar profesionales de excelencia, líderes y emprendedores de proyectos en las áreas de redes, infraestructura tecnológica y servicios telemáticos. Realizar investigación científica e innovación tecnológica relacionada a los sistemas y servicios basados en red con sólidos valores éticos y morales para contribuir con el desarrollo tecnológico del Ecuador.</h5>
+
+			<h3>Laboratorios</h3>
+				<h5>La carrera de Ingeniería en Telemática cuenta con los siguientes laboratorios para servicio de los estudiantes:
+			
+			<h5></h5>		
+					<li style="color: rgb(14, 13, 13); font-style: italic;">Laboratorio de Redes Avanzadas.</li>
+					<li style="color: rgb(14, 13, 13); font-style: italic;">Laboratorio de Sistemas y Señales</li>
+					<li style="color: rgb(14, 13, 13); font-style: italic;">Laboratorio de Investigación de Redes e Infraestructura Tecnológica</li>
+					
+
+				</h5>
+							
+		   </div>
+
+		   <h1></h1>
+		   <h1></h1>
+		   <h1></h1>
+		<div class="container">
+			<section class="main row">
+				
+		<form action="ejemplo.php" method="get">
+			<p>♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦<b> Si desea mas informacion dejenos sus datos: </b> ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦</p>
+			<p>♦♦░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░♦♦</p>
+			<p></p>
+			<p></p>
+			<p>♦♦░░░░░░░░░░░░░░░░░░░░░░░░░░ Nombre: <input type="text" name="nombre" size="40"> ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░♦♦</p>
+			<p>♦♦░░░░░░░░░░░░░░░░░░░░░░░░░░ Año de nacimiento: <input type="number" name="nacido" min="1990"> ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░♦♦</p>
+			<p>♦♦░░░░░░░░░░░░░░░░░░░░░░░░░░ Sexo: 
+			  <input type="radio" name="hm" value="h"> Hombre
+			  <input type="radio" name="hm" value="m"> Mujer
+			░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░♦♦</p>
+			<p>♦♦░░░░░░░░░░░░░░░░░░░░░░░░░░
+			  <input type="submit" value="Enviar">
+			  <input type="reset" value="Borrar">
+			  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░♦♦</p>
+
+			<p>♦♦░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░♦♦</p>
+			<p>♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦</p>  
+		  </form></section></div>
+
+		
+	
+		
+
+		  <div class="container">
+			
+		  <div class="row">
+			
+			<div id="content" class="col-lg-12">
+				<div id="carrusel"> <h5><b>Libros de Telematica</b></h5>
+					<a href="#" class="left-arrow"><img src="images/left-arrow.png" /></a>
+					<a href="#" class="right-arrow"><img src="images/right-arrow.png" /></a>
+					
+					<div class="carrusel">
+						
+						<div class="product" id="product_0">
+							<img src="gallery/00.jpg" width="115" height="110" />
+							<h6>Boylestad</h6>
+							<p>$ 700.00</p>
+						</div>
+						<div class="product" id="product_1">
+							<img src="gallery/01.jpg" width="115" height="110" />
+							<h6>Fun de Telematica</h6>
+							<p>$ 890.00</p>
+						</div>
+						<div class="product" id="product_2">
+							<img src="gallery/02.jpg" width="115" height="110" />
+							<h6>Redes Telematica</h6>
+							<p>$ 1100.00</p>
+						</div>
+						<div class="product" id="product_3">
+							<img src="gallery/03.jpg" width="115" height="110" />
+							<h6>Progra_principientes</h6>
+							<p>$ 1000.00</p>
+						</div>
+						<div class="product" id="product_4">
+							<img src="gallery/05.jpg" width="115" height="110" />
+							<h6>Progra phyton</h6>
+							<p>$ 900.00</p>
+						</div>
+						<div class="product" id="product_5">
+							<img src="gallery/06.jpg" width="115" height="110" />
+							<h6>Teoria de Circuitos</h6>
+							<p>$ 850.00</p>
+						</div>
+					
+					</div>
+				
+				</div>
+			</div>
+		</div>
+		</div>
+		  
+		
+		<div class="container">
+		<div class="d-flex justify-content-center">  
+			<h1>----------------------------------------------</h1>
+			<h1>&nbsp;&nbsp;BOOTSTRAP POPOVER</h1>
+			<h1>----------------------------------------------</h1>
+			
+		  </div>
+		  <h2>Si desea saber lass ofertas educativas porfavor dejenos su correo </h2>
+		   
+		<div class="d-flex justify-content-center align-items-center container ">
+		  <form>  
+			  <div class="form-group ">
+				<input type="email" class="form-control" id="email" placeholder="Usuario" data-toggle="popover"
+				 data-trigger="hover" data-placement="right" data-content="Escribe el usuario">
+			  </div>
+			  <div class="form-group ">
+				<input type="password" class="form-control" id="pwd" placeholder="Password" data-toggle="popover"
+				data-trigger="hover" data-placement="left" title="Contrasena"  data-content="La Contrasena debe contener una mayuscula y un numero">
+			  </div>
+			  
+			  <div class="form-group  mx-sm-3">
+				<button type="submit" class="btn btn-default"  data-toggle="popover"  data-placement="bottom"
+				data-trigger="hover" data-content="Se enviaran los datos al hacer clic"> Enviar</button>
+			  </div>
+		  </form>
+		</div></div>
+	
+		<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+			<img src="C:\Users\mikdo\Desktop\Pagina c\lux_dou.gif" alt="upiita" width = "800px" border="5"> </h1>
+
+			<h1>----------------------------------------------</h1>
+			<h1>&nbsp;&nbsp;Si desea saber mas</h1>
+			<h1>----------------------------------------------</h1>
+
+		<div class="container">
+			
+			<center>
+				<video width="620" height="540" controls>
+					<source src="C:\Users\mikdo\Desktop\Pagina c\Telemática.mp4" type="video/mp4">
+					
+				  </video>
+				</center>
+				</div>
+
+
+			<h1>----------------------------------------------</h1>
+			<h1>&nbsp;&nbsp;Mapa de UPIITA</h1>
+			<h1>----------------------------------------------</h1>
+
+			<div class="container">
+				<center>
+				<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-99.12858724594118%2C19.509896095261535%2C-99.12447810173036%2C19.51296025290087&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=18/19.51143/-99.12653">Ver mapa más grande</a></small>
+				</center>
+			</div>
+
+			
+			<div class="sticky-container">
+			
+				<ul class="sticky">
+					<li>
+						<img src="images/facebook.jpg" width="32" height="32">
+						<p><a href="https://www.facebook.com/Lumus-Arts-Brother-100667789108395/?ref=pages_you_manage" target="_blank">Sigueme en<br>Facebook</a></p>
+					</li>
+					<li>
+						<img src="images/gorjeo.jpg" width="32" height="32">
+						<p><a href="https://twitter.com" target="_blank">Sigueme en <br>Twitter</a></p>
+					</li>
+					<li>
+						<img src="images/google.jpg" width="32" height="32">
+						<p><a href="https://plus.google.com" target="_blank">Sigueme en <br>Google+</a></p>
+					</li>
+					<li>
+						<img src="images/MMS.jpg" width="32" height="32">
+						<p><a href="https://www.linkedin.com/company" target="_blank">Siguenos en <br>LinkedIn</a></p>
+					</li>
+					<li>
+						<img src="images/youtube.jpg" width="32" height="32">
+						<p><a href="https://www.youtube.com/channel/UCUl1_qS0DRh6dUCc-5P43sg" target="_blank">Suscribete en <br>YouYube</a></p>
+					</li>
+					<li>
+						<img src="images/picture.jpg" width="32" height="32">
+						<p><a href="https://www.pinterest.com" target="_blank">Siguenos en <br>Pinterest</a></p>
+					</li>
+				</ul></div>
+
+				<div class="container">
+					<center>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/cQhbVj44nPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</center>
+				</div>
+				<div class="container">
+			<h1>----------------------------------------------</h1>
+			<h1>&nbsp;&nbsp;Barra de progreso</h1>
+			<h1>----------------------------------------------</h1>
+					<center>
+				<label for="file">Barra de progreso</label>
+
+				<progress id="file" max="100" value="70"> 70% </progress>
+			</center>
+			</div>
+
+
+			<div class="container"></div>
+			<section id="main">
+				<div id="tabs">
+					<span class="diana" id="uno"></span>
+					<a href="#uno" class="tab-e">Panel 1</a>
+					<span class="diana" id="dos"></span>
+					<a href="#dos" class="tab-e">Panel 2</a>
+					<span class="diana" id="tres"></span>
+					<a href="#tres" class="tab-e">Panel 3</a>
+					
+					<div id="pnl_1">
+						<div>
+							<p></p>
+							<p>Una definición de alto nivel
+								JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado. Es la tercera capa del pastel de las tecnologías web estándar, dos de las cuales (HTML y CSS) hemos cubierto con mucho más detalle en otras partes del Área de aprendizaje.
+								
+								</p>
+						</div>
+					</div>
+		
+					<div id="pnl_2">
+						<div>
+							<p>La programación orientada a objetos se basa en el concepto de crear un modelo del problema de destino en sus programas. La programación orientada a objetos disminuye los errores y promociona la reutilización del código. Python es un lenguaje orientado a objetos. Los objetos definidos en Python tienen las características siguientes:
+
+								Identidad. Cada objeto debe ser distinguido y ello debe poder demostrarse mediante pruebas. Las pruebas is e is not existen para este fin.
+								Estado Cada objeto debe ser capaz de almacenar el estado. Para este fin, existen atributos, tales como variables de instancias y campos.
+								Comportamiento. Cada objeto debe ser capaz de manipular su estado. Para este fin existen métodos.
+								Python incluye las características siguientes para dar soporte a la programación orientada a objetos:
+								
+								Creación de objetos basada en clases. Las clases son plantillas para la creación de objetos. Los objetos son estructuras de datos con el comportamiento asociado.</p>
+		
+							<p></p>
+						</div>
+					</div>
+		
+					<div id="pnl_3">
+						<div>
+							<p> ¿Quieres saber qué es el lenguaje C y sus características? En este artículo resolvemos tus dudas sobre este lenguaje de programación de bajo nivel.
+
+								C es un lenguaje de programación (considerado como uno de lo más importantes en la actualidad) con el cual se desarrollan tanto aplicaciones como sistemas operativos a la vez que forma la base de otros lenguajes más actuales como Java, C++ o C#.
+								
+								El lenguaje C no es sencillo, por eso recomendamos que se haga una primera aproximación realizando un curso de programación en C para adquirir los conocimientos básicos y poder empezar a trabajar con una base sólida.</p>
+		
+							<p> Todos los programas que son creados tienen un diferentes tipos de formato. Este formato es conocido como la sintaxis. La sintaxis en C es una serie de reglas y procesos que lideran la estructura de un programa. Estas reglas tienen que ser entendidas por el compilador para que se pueda crear un programa en C válido, es decir, tienen que establecer cómo comienza una línea de código en C, cómo termina o cuándo usar, por ejemplo, comillas o llaves. El lenguaje en C hace distinción entre mayúsculas y minúsculas siendo este el motivo por el que se programa en minúsculas.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer>
+				░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+				░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+				<h3>►►►►Lenguajes de programacion recurentes en la telematica◄◄◄◄</h3>
+				░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+				░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+			</footer></div>
+
+<!--Archivos de javascript-->
+		<script src=”https://code.jquery.com/jquery-3.6.0.min.js” integrity=”sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n” crossorigin=”anonymous”>
+		</script> 
+		<script src = main.js></script>
+		<script src=”https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js” integrity=”sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo” crossorigin=”anonymous”>
+		</script>
+		<script src=”https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js” integrity=”sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6″ crossorigin=”anonymous”>
+		</script>
+	</body>
+
+	</html>
